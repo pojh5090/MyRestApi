@@ -3,15 +3,15 @@ package com.example.demo.model;
 import java.sql.Date;
 
 public class UserModel {
-	private int id;
+	private String id;
 	private String name;
 	private String password;
 	private String email;
 	private Date created_on;
 	private boolean login_yn;
 	private String client_ip;
-	
-	public UserModel(int id, String name, String password, String email, Date created_on, boolean login_yn,
+
+	public UserModel(String id, String name, String password, String email, Date created_on, boolean login_yn,
 			String client_ip) {
 		super();
 		this.id = id;
@@ -23,19 +23,19 @@ public class UserModel {
 		this.client_ip = client_ip;
 	}
 
-	public UserModel(int id, String name, String password) {
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public UserModel(String id, String name, String password) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.password = password;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getName() {
